@@ -1,0 +1,78 @@
+
+vr27 cloned from vr13 for the purposes re-acquaintancing myself with these basic processes and of documenting them in Commands.txt
+
+
+from youtube:https://www.youtube.com/watch?v=H5JXz1RzRTY   11:16 "Unlock Lightning-fast SEO-friendly 
+Apps with Vite SSR and React"
+from github:gihanrangana/vite-express-ssr-ts  //  Unlock Lightning-fast SEO-friendly Apps with Vite SSR and React
+saved in c:\web\00_archives/vite-express-ssr-ts-main
+
+the github example is more built out than the youtube example. It has 3 pages (react-router), helmet). 
+
+stack: "Y@https://vr13.onrender.com/assets/index-6mBp7LUM.js:75:13400\nXw@https://vr13.onrender.com/assets/index-6mBp7LUM.js:77:1042\nE@https://vr13.onrender.com/assets/index-6mBp7LUM.js:77:4233\n"
+
+
+
+vr13 is built out vite-express-ssr-ts-main using react, succesful fetch from backend, fetching 
+entries from mongo but not C-UD of crud. Successfully uploaded to render.
+vr13 is to be left as is.
+vr18 to be vr13 built out to include crud, including (react) useContext to update local totals 
+to be in synch with remote mongo db.
+
+
+
+
+had this message in render log when deploying: 
+" Poetry (1.7.1) is installed now. Great!
+To get started you need Poetry's bin directory (/opt/render/project/poetry/bin) in your `PATH`
+environment variable.
+Add `export PATH="/opt/render/project/poetry/bin:$PATH"` to your shell configuration file.
+Alternatively, you can call Poetry explicitly with `/opt/render/project/poetry/bin/poetry`.
+You can test that everything is set up by executing:
+`poetry --version` "
+
+settings in render
+// the following, static website did not work 
+Branch:     main
+Root Directory:   blank(ie nothing entered)
+Build Command:   npm install
+Publish Directory:   ./dist/app/client
+
+
+
+vr13 successful deployment with successful api facility
+in render as "web service"     
+  branch =  main   
+  root directory = blank     
+  Build Command =   npm install; npm run build       
+  Start Command  =  npm run serve       
+
+
+
+
+
+to do:
+separate file for data to be imported. (ie /folks).
+see youtube see 6:00 of  poXp9uP8TfM  19:50   "How to deploy frontend and backend on 
+Render in the same folder?"                  
+
+
+using array in xxx.map  do <div key={dat["id"]}>  <h6>{dat['title']}  {dat['reps']} {dat['load']}</h6> </div>  
+workoutControllers changed to .ts from .js and changed (req,res) to (req:any,res:any)
+
+
+
+
+         <div>
+            {
+            users.map(user => (
+                                    <div key={user.id}> 
+                                       <h4>{user.username}</h4>
+                                       <h4>{user.city}</h4>
+                                     </div>  
+                              )         
+                      )                 
+
+              }
+         </div> 
+
